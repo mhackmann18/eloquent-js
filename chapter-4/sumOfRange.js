@@ -1,17 +1,22 @@
-let range = (start, end, step = 1) => {
+function range(start, end, step = 1){
   let arr = [];
-  for(let i = start; i <= end; i += step) {
-    arr.push(i);
+  if(step > 0){
+    for(let i = start; i <= end; i += step){
+      arr.push(i);
+    }
+  } else if(step < 0){
+    for(let i = start; i >= end; i += step){
+      arr.push(i);
+    }
   }
+  
   return arr;
 }
 
-let sum = (arr) => {
-  let sum = 0;
-  for(let i of arr){
-    sum += i;
+function sum(a){
+  count = 0;
+  for(i of a){
+    count += i;
   }
-  return sum;
+  return count;
 }
-
-console.log((range(1,10, 2)));
