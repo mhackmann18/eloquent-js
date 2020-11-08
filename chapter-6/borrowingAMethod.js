@@ -14,5 +14,6 @@ object.hasOwnProperty = function(){
   return "This is not the function you're looking for...";
 }
 
+// DISCLAIMER: I was not able to solve this one on my own, this is a solution I found online
 console.log(object.hasOwnProperty("city"));
 console.log(Object.prototype.hasOwnProperty.call(object, "city"));
